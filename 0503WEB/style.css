@@ -7,6 +7,7 @@
 .hero {
   width: 100%;
   min-height: 100vh;
+  min-width: 100vh;
   background-image: url(socially_img/back-image.png);
   background-position: center;
   background-size: cover;
@@ -19,7 +20,7 @@ nav {
   padding: 10px 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .logo {
@@ -47,7 +48,7 @@ nav ul li a {
   text-decoration: none;
   padding: 14px 40px;
   color: #fff;
-  background-image: linear-gradient(45deg, #df4881, #c430d7);
+  background-image: linear-gradient(180deg, #df4881, #c430d7);
   font-size: 14px;
   border-radius: 30px;
   border-top-right-radius: 0;
@@ -94,8 +95,9 @@ nav ul li a {
   opacity: 0;
   transform: translateY(30px);
   animation: moveup 1s linear forwards;
+  /*이름 속도  linear-끊김없이 돌아감 일정속도 / forward->마지막에 설정된 값유지*/
 }
-
+/*애니메이션 이름*/
 @keyframes moveup {
   100% {
     opacity: 1;
