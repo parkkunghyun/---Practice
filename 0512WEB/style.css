@@ -1,0 +1,185 @@
+/*
+border-radius : 20%;
+
+box-sizing을 border-box로 설정시 padding과 border를 포함시킴
+
+width : 300px;
+블록의 경우 margin : 20px auto로 두면 가운데 정렬됨
+inline의 경우 text-align: center을 해주면 됨
+
+display의 경우 레이아웃의 종류 즉 박스의 성질을 변환시킴
+*/
+
+/*
+웹사이트 영역 구분하기
+
+헤더 - 상단에 위치 및 로고나 nav를 포함시킴
+nav - 다른페이지로 이동하는 링크가 모임
+main - page주요 정보 <main>
+article - 블로그나 게시글
+aside - 광고나 보조적인 정보를 배치함
+footer - 저작권 및 문의처가 표시 됨
+
+글로벌 내비게이션 - 모든 페이지에 고정된 내비게이션
+로컬내비게이션 - 블로그의 카테고리 목록처럼 옵션 제시
+사이트 이동경로 내비게이션- 쇼핑몰 사이트에서 이동 경로
+
+
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #7c5d48;
+}
+
+body {
+  background-image: url(./images/bg.png);
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+}
+
+header {
+  width: 80%;
+  margin: 0 auto 44px;
+}
+header h1 {
+  text-align: center;
+  padding: 20px 0 16px;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #7c5d48;
+  border-bottom: 2px solid #7c5d48;
+  padding: 12px 0px 10px;
+}
+.nav ul li {
+  margin: 0 20px;
+}
+.nav ul li a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #7c5d48;
+}
+
+.nav ul li a:hover {
+  color: black;
+}
+
+div {
+  width: 80%;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div main {
+  flex-basis: 70%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 62px 72px 32px 72px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+  /* x y 흐림정도 색상 => 양수면 오른쪽 아래 / 음수면 왼쪽이나 위쪽*/
+}
+
+div main article h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+div main article time {
+  background-color: #a6d267;
+  color: #ffffff;
+  border-radius: 0px 22px 22px 22px;
+  padding: 11px;
+  display: inline-block;
+}
+.time {
+  margin-bottom: 26px;
+}
+.eyecatch {
+  margin-bottom: 26px;
+}
+
+article h3 {
+  border-bottom: 2px solid #7c5d48;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-image: url(./images/h2_icon.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding: 20px 10px 10px 48px;
+}
+
+article section {
+  margin-bottom: 50px;
+}
+
+article section p {
+  line-height: 1.6;
+  margin-bottom: 26px;
+}
+
+/* aside 부분 */
+
+div aside {
+  flex-basis: 10%;
+  margin: 10px;
+}
+
+aside nav {
+  margin: 10px 0px 24px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+  padding: 24px 24px;
+}
+
+aside nav h2 {
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #7c5d48;
+}
+
+aside nav ul {
+  font-size: 0.9rem;
+  height: 9rem;
+}
+
+.category_nav ul li {
+  list-style: square;
+  margin: 0 0 16px 20px;
+}
+
+.articles_nav ul {
+  overflow: hidden scroll;
+}
+
+.articles_nav ul li {
+  border-bottom: 1px solid #7c5d48;
+  padding-bottom: 10px;
+  margin: 0 0 16px 8px;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  padding: 14px 10px 20px;
+  background-color: #523f2e;
+  color: #ffffff;
+}
