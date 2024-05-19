@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미디어 쿼리를 이용한 반응형 웹 실무 페이지</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!--로그인 영역-->
+      <p id="login">
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </p>
+      <!--상단의 white nav-->
+      <nav id="desktopGnb1">
+        <ul>
+          <li>
+            <a href="">
+              <h1>한솥</h1>
+            </a>
+          </li>
+          <li><a href=""></a></li>
+          <li><a href="#brand">브랜드</a></li>
+          <li><a href="#menu">메뉴</a></li>
+          <li><a href="#story">스토리</a></li>
+          <li><a href="#philosophy">철학</a></li>
+          <li><a href="#ingredients">성분</a></li>
+          <li><a href="#more">더보기</a></li>
+        </ul>
+      </nav>
+
+      <!--상단의 black nav-->
+      <nav id="desktopGnb2">
+        <ul>
+          <li>
+            <a href="">
+              <h1>한솥</h1>
+            </a>
+          </li>
+          <li><a href=""></a></li>
+          <li><a href="#brand">브랜드</a></li>
+          <li><a href="#menu">메뉴</a></li>
+          <li><a href="#story">스토리</a></li>
+          <li><a href="#philosophy">철학</a></li>
+          <li><a href="#ingredients">성분</a></li>
+          <li><a href="#more">더보기</a></li>
+        </ul>
+      </nav>
+
+      <!--화면이 줄었을때 햄버거버튼 눌렀을때 보여지는 nav -->
+      <nav id="mobileGnb">
+        <ul>
+          <div class="menubar">
+            <a href="#">
+              <h1>한솥</h1>
+            </a>
+            <a href="#" class="hambegerBtn"
+              ><span class="material-symbols-outlined"> menu </span></a
+            >
+          </div>
+          <li><a href="#">로그인</a><a href="#">회원가입</a></li>
+          <li><a href="#brand">브랜드</a></li>
+          <li><a href="#menu">메뉴</a></li>
+          <li><a href="#story">스토리</a></li>
+          <li><a href="#philosophy">철학</a></li>
+          <li><a href="#ingredients">성분</a></li>
+          <li><a href="#more">더보기</a></li>
+          <li class="close">
+            <span class="material-symbols-outlined"> close </span>
+          </li>
+        </ul>
+      </nav>
+
+      <!--상단 캐로 셀-->
+      <section id="brand" class="carousel">
+        <ul class="gallery">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="carousel_btn">
+          <ul class="btn">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li class="pause">9</li>
+            <li class="play">10</li>
+          </ul>
+        </div>
+      </section>
+
+      <!--두번째 컨텐츠 메뉴-->
+      <section id="menu">
+        <div class="content">
+          <div class="img"></div>
+          <p>가격 이상의 가치가 담긴 다양한 메뉴를 확인해 보세요</p>
+          <span class="play_btn"></span><span>한솥메뉴</span>
+        </div>
+        <div class="content">
+          <div class="img"></div>
+          <p>갓 지은 한끼가 기다리고 있는 가까운 한솥 매장을 찾아보세요</p>
+          <span class="play_btn"></span><span>주변점포찾기</span>
+        </div>
+      </section>
+
+      <!--세변째 컨텐츠 story-->
+      <section id="story">
+        <div class="content">
+          <p class="title">가맹점주에게도 든든한 한솥입니다.</p>
+          <span
+            >점주님들의 꿈을 실현시켜 드리기 위해 가맹점주와 성공까지 동행하는
+            한솥! 상답부터 개업까지 모든 회로애락을 함께 합니다.</span
+          >
+        </div>
+        <div class="content">
+          <div class="img"></div>
+          <p>한솥은 언제나 고객과 점주님들의 이익을 먼저 생각합니다</p>
+          <span class="play_btn"></span>wyh 한솥 가맹점<span></span>
+        </div>
+        <div class="content">
+          <div class="img"></div>
+          <p>한솥과 함께하는 가맹점주들의 성공 스토리입니다</p>
+          <span class="play_btn"></span><span>성공수기</span>
+        </div>
+      </section>
+
+      <!--네번째 커컨텐츠  philoisophy-->
+      <section id="philosophy">
+        <div class="bg"></div>
+        <div class="content">
+          <p>든든한 솥밥을 위해 한솥이 지키고 키워가는 것들</p>
+          <span>
+            한솥은 '따끈한 도시락으로 지역사회에 공한한다' 라는 기업이념 아래,
+            고객 이익을 최우선으로 하며 엄선된 좋은 식재료만 사용하는 대한민국
+            외식종합기업 시장을 리드하는 글로벌 종합외식기업 입니다.
+          </span>
+          <div class="btn">브랜드 철학</div>
+        </div>
+      </section>
+
+      <!--성분-->
+      <section id="ingredients">
+        <div class="bg"></div>
+        <div class="content">
+          <p class="title">식재료 앞에서는 <br />한없이 <br />까탈스럽습니다</p>
+          <span class="paragraph"
+            >맑고 깨끗한 자연 환경속에서 재배된 식재료가 아니면 한솥이 될 수
+            없습니다. <br />
+            모든 식재료는 고객분들이 안심하고 드실 수 있도록 엄격한 기준 아래
+            선별됩니다.</span
+          >
+          <div>
+            <span class="play_btn"></span>
+            <span>식재료 이야기</span>
+          </div>
+        </div>
+      </section>
+
+      <!--더보기 폰이면 없어짐-->
+      <section id="more">
+        <p><span>더 많은 이야기</span><span></span></p>
+        <div class="content">
+          <div>
+            <p>한솥의 약속</p>
+          </div>
+        </div>
+        <div class="content">
+          <div>
+            <p>온라인 이벤트</p>
+          </div>
+        </div>
+        <div class="content">
+          <div>
+            <p>한솥 NEWS</p>
+          </div>
+        </div>
+      </section>
+
+      <!--footer-->
+      <div id="footer">
+        <ul class="info">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="awards md_awards">
+          <span></span>
+        </div>
+        <br />
+        <div class="lg_copyright">
+          <p>
+            대표이사 이영덕, 이하림 사업자등록번호 214-81-96569 서울특별시
+            강남구 압구정로 459(청담동, 한솥빌딩) T. 02-585-1114
+          </p>
+          <p>
+            E. webmaster@hsd.co.kr 한솥 도시학 고객센터 02-585-1114
+            전국창업설명회 02-585-1114
+          </p>
+        </div>
+        <p>COPYRIGHT&copy;(주)한솥, ALL RIGHTS RESERVED.</p>
+        <div class="sns"><a href=""></a><a href=""></a></div>
+        <div class="awards sm_awards">
+          <span></span>
+        </div>
+        <div class="md_copyright">
+          <p class="companyInfo">한솥 사업자 정보<span class="down"></span></p>
+          <div>
+            <p>
+              대표이사 이영덕, 이하림 사업자등록번호 214-81-96569 서울특별시
+              강남구 압구정로 459(청담동, 한솥빌딩) T. 02-585-1114
+            </p>
+            <p>
+              E. webmaster@hsd.co.kr 한솥 도시학 고객센터 02-585-1114
+              전국창업설명회 02-585-1114
+            </p>
+          </div>
+          <p>COPYRIGHT&copy;(주)한솥, ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

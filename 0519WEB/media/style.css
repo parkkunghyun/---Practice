@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6ebbb;
+}
+
+#wrapper {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  overflow: hidden;
+}
+
+nav li {
+  width: 20%;
+  float: left;
+  list-style: none;
+  border: 1px solid brown;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+section {
+  width: 100%;
+  border: 1px solid brown;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+footer {
+  width: 100%;
+  border: 1px solid brown;
+  padding: 20px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* @media query -차고로 이거 적는 순서 중요! 
+min-width는 이것보다 커야하기때문에 더 작은것부터 적기!!
+max-width는 이거 이하이기 때문에 더 큰거부터 작성!
+*/
+/*디바이스 장치의 가로 사이즈가 최소 960일때 -- min-width : 960px- > 랩탑 */
+@media screen and (min-width: 960px) {
+  body {
+    background-color: white;
+  }
+  #wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  header span.material-symbols-outlined {
+    display: none;
+  }
+}
+
+/*디바이스 장치의 가로 사이즈가 최소 768이상미녀서 최고 959일때 > 태블릿 */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  body {
+    background-color: red;
+  }
+  #wrapper {
+    width: 100%;
+  }
+  header span.material-symbols-outlined {
+    display: none;
+  }
+}
+
+/*디바이스 장치의 가로 사이즈가 최고 767일때 > 폰 */
+@media screen and (max-width: 767px) {
+  body {
+    background-color: yellow;
+  }
+  nav {
+    display: none;
+  }
+  header {
+    position: relative;
+  }
+  header span.material-symbols-outlined {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 2em;
+  }
+
+  header span.material-symbols-outlined:hover + nav {
+    display: block;
+  }
+  nav li {
+    width: 100%;
+  }
+  section p {
+    font-size: 1.5em;
+  }
+}
+
+/*
+@media (max-width: 576px) {
+ 디바이스에서 웹사이트를 볼때 가로 사이즈가 576이하일때 - 스마트폰 세로 사이즈
+  body {
+    background-color: white;
+  }
+}
+
+@media (min-width: 768px) {
+  디바이스에서 웹사이트를 볼때 가로 사이즈가 768이상일때 - 스마트폰 가로 
+  body {
+    background-color: royalblue;
+  }
+}
+
+@media (min-width: 992px) {
+  디바이스에서 웹사이트를 볼때 가로 사이즈가 992이상일때 - 주로 태블릿 
+  body {
+    background-color: brown;
+  }
+}
+
+@media (min-width: 1200px) {
+  디바이스에서 웹사이트를 볼때 가로 사이즈가 1200이상일때 - 주로 데스크 탑
+  body {
+    background-color: gray;
+  }
+}
+*/
