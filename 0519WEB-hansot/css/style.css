@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #5bbdeb;
+  overflow-x: hidden;
+}
+#wrapper {
+  font-family: "Noto Sans KR", sans-serif;
+  width: 100%;
+  font-size: 0.9em;
+  position: relative;
+}
+
+ul li,
+ol li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* 로그인 */
+#wrapper > p#login {
+  width: 60%;
+  position: absolute;
+  top: 5px;
+  right: 20%;
+  font-size: 0.8em;
+  z-index: 99;
+  /*상단에 있으면 absolute로 줘도됨 화면 크기가 줄어둘어도 영향 많이 안받아서*/
+}
+
+#wrapper > p#login > a {
+  float: right;
+  color: white;
+  display: block;
+}
+
+#wrapper > p#login > a:nth-of-type(1),
+#wrapper > p#login > a:nth-of-type(2) {
+  /* width: 28px;
+  height: 28px; */
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+#wrapper > p#login > a:nth-of-type(1) {
+  background: url("../img/icon_sns_01.png") -200% 0;
+  background-size: 400%;
+}
+
+#wrapper > p#login > a:nth-of-type(2) {
+  background: url("../img/icon_sns_01.png") -300%;
+  background-size: 400%;
+}
+
+#wrapper > p#login > a:nth-of-type(3)::before,
+#wrapper > p#login > a:nth-of-type(3)::after {
+  content: "|";
+  margin: 10px;
+}
+
+/* desktopGnb1 */
+nav#desktopGnb1,
+nav#desktopGnb2 {
+  background-color: white;
+  width: 60%;
+  height: 100px;
+  position: absolute;
+  top: 40px;
+  left: 20%;
+  padding: 0 20px;
+  z-index: 999999;
+}
+
+nav#desktopGnb2 {
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+  height: 60px;
+  position: fixed;
+  z-index: 9999;
+}
+
+nav#desktopGnb1 li {
+  float: left;
+  width: 12%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+nav#desktopGnb2 li {
+  float: left;
+  width: 12%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
+nav#desktopGnb2 li:first-child {
+  position: relative;
+  left: 5%;
+}
+nav#desktopGnb1 li a,
+nav#desktopGnb2 li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+nav#desktopGnb2 li a {
+  color: white;
+}
+nav#desktopGnb1 li:hover a,
+nav#desktopGnb2 li:hover a {
+  color: #f4cf02;
+}
+nav#desktopGnb1 li h1,
+nav#desktopGnb2 li h1 {
+  text-indent: -9999px;
+  background: url(../img/h1_logo.png) no-repeat center;
+  background-size: 80%;
+}
+
+nav#desktopGnb2 li h1 {
+  background: url(../img//bg_w_h1_logo.png) no-repeat center;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  margin: 12px auto;
+}
+
+nav#desktopGnb2 li a {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+nav#desktopGnb2 li a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 5px;
+  transition: width 0.5s;
+  margin: 0 auto;
+}
+
+nav#desktopGnb2 li:hover a::after {
+  width: 50%;
+  background-color: orange;
+}
+
+nav#desktopGnb2 li:first-child:hover a::after {
+  width: 0;
+}
+
+/* 캐로 셀 */
+section#brand.carousel {
+  width: 100%;
+  height: 650px;
+  position: relative;
+  border: 2px solid orange;
+}
+section#brand.carousel ul.gallery li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+section#brand.carousel ul.gallery li:nth-child(1) {
+  background: url(../img/carousel_0001.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(2) {
+  background: url(../img/carousel_0002.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(3) {
+  background: url(../img/carousel_0003.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(4) {
+  background: url(../img/carousel_0004.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(5) {
+  background: url(../img/carousel_0005.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(6) {
+  background: url(../img/carousel_0006.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(7) {
+  background: url(../img/carousel_0007.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(8) {
+  background: url(../img/carousel_0008.jpg) center;
+}
+
+/* 캐로셀 버튼 */
+section#brand.carousel div.carousel_btn {
+  position: absolute;
+  width: 70%;
+  left: 20%;
+  bottom: -5%;
+}
+section#brand.carousel div.carousel_btn ul.btn {
+  position: absolute;
+  left: 10px;
+  width: 500px;
+  height: 50px;
+  bottom: 30px;
+}
+section#brand.carousel div.carousel_btn ul.btn li {
+  width: 45px;
+  height: 8px;
+  background-color: gray;
+  float: left;
+  margin: auto 4px;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+section#brand.carousel div.carousel_btn ul.btn li:hover,
+section#brand.carousel div.carousel_btn ul.btn li.active {
+  background-color: orange;
+}
+
+section#brand.carousel div.carousel_btn ul.btn li.pause {
+  width: 45px;
+  height: 45px;
+  background: url(../img/icon_play.png);
+  background-size: 90px;
+  position: relative;
+  bottom: 20px;
+}
+section#brand.carousel div.carousel_btn ul.btn li.play {
+  width: 45px;
+  height: 45px;
+  background: url(../imrg/icon_play.png);
+  background-size: 90px;
+  position: relative;
+  background-position: -45px;
+  bottom: 20px;
+  display: none;
+}
+
+/** 메뉴 **/
+section#menu,
+section#story,
+section#ingredient,
+section#more {
+  width: 60%;
+  height: 500px;
+  position: relative;
+  margin: 60px auto;
+}
+
+section#menu div.content {
+  width: 48%;
+  height: 100%;
+  float: left;
+  background-color: #e9e4e4;
+  margin: 0 1%;
+  cursor: pointer;
+  border-bottom: 5px solid #686464;
+  transition: border-bottom 0.5s;
+}
+section#menu div.content div.img {
+  width: 100%;
+  height: 300px;
+  background: url(../img/main_img_01.jpg) center no-repeat;
+  background-size: cover;
+}
+section#menu div.content:nth-child(2) div.img {
+  width: 100%;
+  height: 300px;
+  background: url(../img/main_img_02.jpg) center no-repeat;
+  background-size: cover;
+}
+section#menu div.content:hover {
+  border-bottom: 5px solid orange;
+}
+section#menu div.content p {
+  padding: 20px;
+  font-size: 1.3em;
+}
+section#menu div.content span.play_btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/btn_link.png);
+  background-size: 40px;
+  margin: 5px 10px 5px 20px;
+  transition: background-position 0.5s;
+}
+section#menu div.content:hover span.play_btn {
+  background-position: -20px;
+}
+section#menu div.content span.play_btn + span {
+  position: relative;
+  top: -10px;
+}
+
+/** 스토리 **/
+
+/** 철학 **/
+
+/** 성분 **/
+
+/*************/
+/* device 장치가 최소 1200px일때 -> 모니터 크기가 1200 픽셀 이상일때*/
+@media screen and (min-width: 1200px) {
+  nav#mobileGnb {
+    display: none;
+  }
+}
+
+/* device 장치가 최대 1199px일때 -> 모니터 크기가 1200 픽셀 보다 작을때 - 대략 노트북*/
+@media screen and (max-width: 1199px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body.hidden {
+    /*스마트폰일때만 잠깐 생기는 애 - 스크롤 없애기 위함*/
+    overflow: hidden;
+  }
+  nav#desktopGnb1,
+  nav#desktopGnb2 {
+    display: none !important;
+  }
+  nav#mobileGnb {
+    display: block;
+    background-color: white;
+    padding: 10px 0;
+  }
+
+  /*원래 화면에 고정 nav는 안보이고 햄버거 버튼 누르면 모바일 메뉴 보이게*/
+  nav#mobileGnb ul.mobileMenu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    padding-top: 50px;
+    z-index: 999999;
+  }
+  nav#mobileGnb a {
+    color: black;
+  }
+  nav#mobileGnb h1 {
+    width: 25px;
+    height: 25px;
+    background: url(../img/m_h1_logo.png) no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    margin: 15px;
+  }
+  nav#mobileGnb ul.mobileMenu li:last-child {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  nav#mobileGnb ul.mobileMenu li:last-child span {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  nav#mobileGnb .hambegerBtn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    font-size: 2em;
+  }
+  nav#mobileGnb .hambegerBtn span {
+    font-size: 1.5em;
+  }
+  nav#mobileGnb ul.mobileMenu li a {
+    line-height: 3.5em;
+    margin-left: 50px;
+    font-weight: bold;
+  }
+  nav#mobileGnb ul.mobileMenu li:hover a {
+    color: orange;
+  }
+
+  /* 캐로셀 height 조절 */
+  section#brand.carousel {
+    height: 350px;
+  }
+
+  section#brand.carousel ul.gallery li {
+    background-size: cover !important;
+  }
+
+  section#brand.carousel div.carousel_btn ul.btn {
+    bottom: -20px;
+  }
+  section#menu {
+    width: 100%;
+  }
+}
+/* device 장치 768 <= <=1198 -> 태블릿 정도*/
+@media screen and (min-width: 768px) and (max-width: 1198px) {
+}
+
+/* device 장치가 스마트폰*/
+@media screen and (max-width: 767px) {
+  section#brand.carousel ul.gallery li:nth-child(1) {
+    background: url(../img/carousel_001.jpg) center;
+  }
+  section#brand.carousel ul.gallery li:nth-child(2) {
+    background: url(../img/carousel_002.jpg) center;
+  }
+  section#brand.carousel ul.gallery li:nth-child(3) {
+    background: url(../img/carousel_003.jpg) center;
+  }
+  section#brand.carousel ul.gallery li:nth-child(4) {
+    background: url(../img/carousel_004.jpg) center;
+  }
+  section#brand.carousel ul.gallery li:nth-child(5) {
+    background: url(../img/carousel_005.jpg) center;
+  }
+  section#brand.carousel ul.gallery li:nth-child(6) {
+    background: url(../img/carousel_006.jpg) center;
+  }
+  section#brand.carousel ul.gallery li:nth-child(7) {
+    background: url(../img/carousel_007.jpg) center;
+  }
+  section#brand.carousel ul.gallery li:nth-child(8) {
+    background: url(../img/carousel_008.jpg) center;
+  }
+
+  /* 캐로셀 버튼 */
+  section#brand.carousel div.carousel_btn ul.btn {
+    left: -15%;
+  }
+}
